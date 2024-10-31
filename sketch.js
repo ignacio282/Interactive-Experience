@@ -81,6 +81,9 @@ function playGame() {
   if (turn === "boss") {
     boss.attack();
   }
+  if (hand.length === 0 ){
+    dealCards();
+  }
 }
 
 function displayHand() {
@@ -168,6 +171,7 @@ function keyPressed() {
       }
       turn = "boss";
       hand.splice(0,1);
+      console.log(`you have `+ hand.length + ` cards left`)
     }
     if (key === "2") {
       if (hand[1].type === 0) {
@@ -203,4 +207,5 @@ function keyPressed() {
     }
   }
 }
+
 
