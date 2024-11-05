@@ -51,13 +51,16 @@ function setup() {
   bossDead = false;
   playerDead = false;
   
+  
   let a = createA('https://www.darrencurtismusic.com/freemusicpage1', 'Music by Darren curtis','_blank');
-  a.position(570, 390);
+  a.position(570, 0);
 
 }
 
 function draw() {
   background(bg);
+  fill("rgb(216,195,195)");
+  rect(560,0,170,30);
   console.log(gameState);
   if (gameState === "start") {
     deck = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12];
@@ -298,4 +301,3 @@ function keyPressed() {
     }
   }
 }
-
