@@ -235,6 +235,7 @@ function resetGame() {
 
 function keyPressed() {
   if (gameState === "start" && keyCode === ENTER) {
+    bgMusic.play();
     gameState = "playing";
   } else if (gameState === "gameOver" && keyCode === ENTER) {
     gameState = "start";
